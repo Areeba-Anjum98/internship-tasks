@@ -196,6 +196,81 @@ footer {
     padding-bottom: 30px;
 }
 
+/* Toggle button for dark mode */
+.theme-toggle-btn {
+    background: transparent;
+    color: #ecf0f1;
+    border: 1px solid #ecf0f1;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .header-text h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .subtitle {
+    color: #b0b0c0;
+}
+
+body.dark-mode .container {
+    background: #1f1f30;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode section h2 {
+    color: #ffffff;
+    border-bottom-color: #4aa8e0;
+}
+
+body.dark-mode section p {
+    color: #c0c0d0;
+}
+
+body.dark-mode section ul li {
+    background: #2a2a40;
+    color: #d0d0e0;
+    border-left-color: #4aa8e0;
+}
+
+body.dark-mode footer {
+    color: #a0a0b5;
+}
+
+/* for text visibility when a section is targeted in dark mode */
+body.dark-mode section:target {
+    background-color: #26314a;
+    border-left-color: #4aa8e0;
+    box-shadow: 0 10px 24px rgba(74, 168, 224, 0.25);
+}
+
+body.dark-mode section:target h2 {
+    color: #ffffff;
+}
+
+body.dark-mode section:target p,
+body.dark-mode section:target li {
+    color: #d0d0e0;
+}
+
+/* Contact-dark mode */
+body.dark-mode section a {
+    color: #4aa8e0;
+}
+
+body.dark-mode section a:hover {
+    color: #6cc0f5;
+}
+
 /* media queries for responsiveness  */
 @media (max-width: 768px) {
     nav {

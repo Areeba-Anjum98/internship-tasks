@@ -16,6 +16,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <button id="theme-toggle" class="theme-toggle-btn">Dark Mode</button>
             </ul>
         </nav>
 
@@ -62,5 +63,19 @@
         <footer>
             <p>&copy; 2026 Areeba Anjum. All rights reserved.</p>
         </footer>
+
+        <script>
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            themeToggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
+                    themeToggleBtn.textContent = 'Light Mode';
+                } else {
+                    themeToggleBtn.textContent = 'Dark Mode';
+                }
+            });
+        </script>
     </body>
 </html>
