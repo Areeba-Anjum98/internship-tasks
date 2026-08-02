@@ -47,6 +47,13 @@ nav {
     gap: 26px;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+}
+
 .nav-links a {
     color: #ecf0f1;
     text-decoration: none;
@@ -110,7 +117,7 @@ nav {
 .container {
     background: #ffffff;
     width: 100%;
-    max-width: 950px;
+    max-width: 1000px;
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -271,6 +278,102 @@ body.dark-mode section a:hover {
     color: #6cc0f5;
 }
 
+/* Contact Form Styles */
+#contactForm {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #e74c3c;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    min-height: 14px;
+}
+
+.submit-btn {
+    align-self: flex-start;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.success-msg {
+    display: none;
+    color: #27ae60;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.success-msg.show {
+    display: block;
+}
+
+/* Dark mode support for contact form */
+body.dark-mode .form-group label {
+    color: #d0d0e0;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: #2a2a40;
+    color: #e0e0e0;
+    border-color: #3a3a55;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #4aa8e0;
+}
+
 /* media queries for responsiveness  */
 @media (max-width: 768px) {
     nav {
@@ -278,6 +381,10 @@ body.dark-mode section a:hover {
     }
 
     .nav-links {
+        gap: 16px;
+    }
+
+    .nav-right {
         gap: 16px;
     }
 
@@ -314,6 +421,23 @@ body.dark-mode section a:hover {
         font-size: 0.85rem;
     }
 
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .theme-toggle-btn {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+
     .hero {
         flex-direction: column-reverse;
         text-align: center;
@@ -346,5 +470,16 @@ body.dark-mode section a:hover {
 
     section h2 {
         font-size: 1.2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        text-align: center;
     }
 }
